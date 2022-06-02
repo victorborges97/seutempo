@@ -24,7 +24,8 @@ function useWeather(city: string): TApiResponse {
       const apiResponse = await fetch(
         `https://api.weatherapi.com/v1/current.json?key=${KEY}&q=${encodeURI(
           city
-        )}&aqi=no`
+        )}&aqi=no`,
+        { mode: "no-cors" }
       );
       const json = await apiResponse.json();
       setStatus(apiResponse.status);
