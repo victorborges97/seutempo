@@ -22,7 +22,7 @@ function useWeather(city: string): TApiResponse {
     try {
       console.info("USEWEATHER: INIT FETCH");
       const apiResponse = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${encodeURI(
+        `https://api.weatherapi.com/v1/current.json?key=${KEY}&q=${encodeURI(
           city
         )}&aqi=no`
       );
