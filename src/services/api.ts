@@ -8,7 +8,7 @@ export type TApiResponse = {
   loading: boolean;
 };
 
-const KEY = "27ef9fd0cf7541169da130306220206";
+const KEY = process.env.NEXT_PUBLIC_KEY_TEMPO;
 
 function useWeather(city: string): TApiResponse {
   const [status, setStatus] = useState<number>(0);
