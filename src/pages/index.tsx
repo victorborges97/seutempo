@@ -44,7 +44,7 @@ export default function Home() {
 
   const getCity = async (lat: any, long: any) => {
     const res = await fetch(
-      `http://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${long}&format=json`
+      `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${long}&format=json`
     );
     const json = await res.json();
 
